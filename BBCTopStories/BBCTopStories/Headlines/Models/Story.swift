@@ -13,5 +13,5 @@ struct Story: Codable {
     let date: Date
     let imageURL: URL
     let description: String
-    let content: String
+    let content: String?
 }

@@ -17,7 +17,13 @@ final class HeadlinesListViewController: UIViewController {
         }
     }
     
-    
+    var stories = [Story]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension HeadlinesListViewController: UITableViewDelegate {
@@ -29,11 +35,13 @@ extension HeadlinesListViewController: UITableViewDelegate {
 
 extension HeadlinesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return stories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "HeadlinesCell") as! HeadlinesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeadlinesCell") as! HeadlinesCell
+        cell.bind(stories[indexPath.row])
+        return cell
     }
 }
 

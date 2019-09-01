@@ -22,7 +22,11 @@ final class HeadlinesController: NSObject {
         }
     }
     
-    private var stories = [Story]()
+    private var stories = [Story]() {
+        didSet {
+            listViewController.stories = stories
+        }
+    }
     
     init(navigationController: UINavigationController, requestPerformer: RequestPerformable = RequestPerformer()) {
         navController = navigationController

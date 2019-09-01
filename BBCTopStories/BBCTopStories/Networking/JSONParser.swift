@@ -42,12 +42,12 @@ class JSONParser {
             let imagePath = json["urlToImage"] as? String,
             let imageURL = URL(string: imagePath),
             let dateString = json["publishedAt"] as? String,
-            let date = dateFormatter.date(from: dateString),
-            let content = json["content"] as? String
+            let date = dateFormatter.date(from: dateString)
             else {
                 print(json)
                 return nil
         }
+        let content = json["content"] as? String
         
         return Story(headline: title, date: date, imageURL: imageURL, description: description, content: content)
     }

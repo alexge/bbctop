@@ -51,7 +51,7 @@ final class RequestPerformer: RequestPerformable {
     private func url(for source: Source, page: Int) -> URL {
         var url = URLComponents(string: basePath)!
         url.queryItems = [
-            URLQueryItem(name: "source", value: source.rawValue),
+            URLQueryItem(name: "sources", value: source.rawValue),
             URLQueryItem(name: "page", value: String(page)),
             URLQueryItem(name: "apiKey", value: apiKey)
         ]
