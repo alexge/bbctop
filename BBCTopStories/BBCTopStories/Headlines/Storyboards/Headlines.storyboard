@@ -13,7 +13,7 @@
         <!--Headlines List View Controller-->
         <scene sceneID="IKy-Sz-Gvo">
             <objects>
-                <viewController storyboardIdentifier="HeadlinesListViewController" id="U6X-zz-gqJ" customClass="HeadlinesListViewController" customModule="BBCTopStories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="headlinesList" id="U6X-zz-gqJ" customClass="HeadlinesListViewController" customModule="BBCTopStories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVE-EL-QTY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

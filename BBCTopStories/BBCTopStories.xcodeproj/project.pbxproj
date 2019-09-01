@@ -11,10 +11,14 @@
 		E8F5D512231BE867001EC42E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D511231BE867001EC42E /* AppDelegate.swift */; };
 		E8F5D519231BE869001EC42E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D518231BE869001EC42E /* Assets.xcassets */; };
 		E8F5D51C231BE869001EC42E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D51A231BE869001EC42E /* LaunchScreen.storyboard */; };
-		E8F5D527231BE869001EC42E /* BBCTopStoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D526231BE869001EC42E /* BBCTopStoriesTests.swift */; };
 		E8F5D532231BEA98001EC42E /* Headlines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D531231BEA98001EC42E /* Headlines.storyboard */; };
 		E8F5D539231BEBA9001EC42E /* HeadlinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D538231BEBA9001EC42E /* HeadlinesController.swift */; };
 		E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D53A231BED15001EC42E /* HeadlinesListViewController.swift */; };
+		E8F5D53E231BEEE3001EC42E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D53D231BEEE3001EC42E /* Storyboards.swift */; };
+		E8F5D541231BEFAE001EC42E /* Array+SceneRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D540231BEFAE001EC42E /* Array+SceneRepresentable.swift */; };
+		E8F5D543231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D542231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift */; };
+		E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */; };
+		E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D54C231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,16 @@
 		E8F5D51B231BE869001EC42E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8F5D51D231BE869001EC42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F5D522231BE869001EC42E /* BBCTopStoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBCTopStoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8F5D526231BE869001EC42E /* BBCTopStoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCTopStoriesTests.swift; sourceTree = "<group>"; };
 		E8F5D528231BE869001EC42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F5D531231BEA98001EC42E /* Headlines.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Headlines.storyboard; sourceTree = "<group>"; };
 		E8F5D538231BEBA9001EC42E /* HeadlinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesController.swift; sourceTree = "<group>"; };
 		E8F5D53A231BED15001EC42E /* HeadlinesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesListViewController.swift; sourceTree = "<group>"; };
+		E8F5D53D231BEEE3001EC42E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		E8F5D540231BEFAE001EC42E /* Array+SceneRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SceneRepresentable.swift"; sourceTree = "<group>"; };
+		E8F5D542231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesStoryboardScenes.swift; sourceTree = "<group>"; };
+		E8F5D548231BF519001EC42E /* BBCTopStoriesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCTopStoriesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsTests.swift; sourceTree = "<group>"; };
+		E8F5D54C231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesStoryboardScenesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D511231BE867001EC42E /* AppDelegate.swift */,
+				E8F5D53D231BEEE3001EC42E /* Storyboards.swift */,
 				E8F5D537231BEAEC001EC42E /* Headlines */,
+				E8F5D53F231BEF9E001EC42E /* Extensions */,
 				E8F5D518231BE869001EC42E /* Assets.xcassets */,
 				E8F5D51A231BE869001EC42E /* LaunchScreen.storyboard */,
 				E8F5D51D231BE869001EC42E /* Info.plist */,
@@ -115,8 +126,10 @@
 		E8F5D525231BE869001EC42E /* BBCTopStoriesTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8F5D526231BE869001EC42E /* BBCTopStoriesTests.swift */,
+				E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */,
+				E8F5D53C231BEE9B001EC42E /* Headlines */,
 				E8F5D528231BE869001EC42E /* Info.plist */,
+				E8F5D548231BF519001EC42E /* BBCTopStoriesTests-Bridging-Header.h */,
 			);
 			path = BBCTopStoriesTests;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D531231BEA98001EC42E /* Headlines.storyboard */,
+				E8F5D542231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -153,6 +167,30 @@
 				E8F5D536231BEAD6001EC42E /* Views */,
 			);
 			path = Headlines;
+			sourceTree = "<group>";
+		};
+		E8F5D53C231BEE9B001EC42E /* Headlines */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D54B231BF57B001EC42E /* Storyboards */,
+			);
+			path = Headlines;
+			sourceTree = "<group>";
+		};
+		E8F5D53F231BEF9E001EC42E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D540231BEFAE001EC42E /* Array+SceneRepresentable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8F5D54B231BF57B001EC42E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D54C231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +248,7 @@
 					};
 					E8F5D521231BE869001EC42E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E8F5D50D231BE867001EC42E;
 					};
 				};
@@ -300,9 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F5D541231BEFAE001EC42E /* Array+SceneRepresentable.swift in Sources */,
+				E8F5D53E231BEEE3001EC42E /* Storyboards.swift in Sources */,
 				E8F5D512231BE867001EC42E /* AppDelegate.swift in Sources */,
 				E8F5D539231BEBA9001EC42E /* HeadlinesController.swift in Sources */,
 				E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */,
+				E8F5D543231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8F5D527231BE869001EC42E /* BBCTopStoriesTests.swift in Sources */,
+				E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */,
+				E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +538,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = BBCTopStoriesTests/Info.plist;
@@ -505,6 +549,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStoriesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBCTopStoriesTests/BBCTopStoriesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBCTopStories.app/BBCTopStories";
@@ -516,6 +562,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = BBCTopStoriesTests/Info.plist;
@@ -526,6 +573,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStoriesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBCTopStoriesTests/BBCTopStoriesTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBCTopStories.app/BBCTopStories";

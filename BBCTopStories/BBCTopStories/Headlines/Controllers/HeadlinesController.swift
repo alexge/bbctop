@@ -13,11 +13,9 @@ final class HeadlinesController: NSObject {
     private let navController: UINavigationController
     private let listViewController: HeadlinesListViewController
     
-    private let storyboard: UIStoryboard = UIStoryboard(name: "Headlines", bundle: .main)
-    
     init(navigationController: UINavigationController) {
         navController = navigationController
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "HeadlinesListViewController") as? HeadlinesListViewController else {
+        guard let viewController: HeadlinesListViewController = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlinesList) else {
             listViewController = HeadlinesListViewController()
             super.init()
             return
