@@ -44,7 +44,6 @@ class JSONParser {
             let dateString = json["publishedAt"] as? String,
             let date = dateFormatter.date(from: dateString)
             else {
-                print(json)
                 return nil
         }
         let content = json["content"] as? String

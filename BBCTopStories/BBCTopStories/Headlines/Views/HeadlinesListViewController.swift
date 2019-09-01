@@ -61,11 +61,3 @@ extension HeadlinesListViewController: UITableViewDataSource {
         }
     }
 }
-
-#if DEBUG
-extension HeadlinesListViewController {
-    var exposedTableView: UITableView {
-        return tableView
-    }
-}
-#endif

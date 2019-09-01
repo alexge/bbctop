@@ -23,6 +23,10 @@
 		E8F5D552231BFCD1001EC42E /* RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D551231BFCD1001EC42E /* RequestPerformer.swift */; };
 		E8F5D554231C08A6001EC42E /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D553231C08A6001EC42E /* JSONParser.swift */; };
 		E8F5D557231C0BCD001EC42E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D556231C0BCD001EC42E /* Story.swift */; };
+		E8F5D55A231C3470001EC42E /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D559231C3470001EC42E /* MockURLSession.swift */; };
+		E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */; };
+		E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */; };
+		E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		E8F5D551231BFCD1001EC42E /* RequestPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPerformer.swift; sourceTree = "<group>"; };
 		E8F5D553231C08A6001EC42E /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E8F5D556231C0BCD001EC42E /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		E8F5D559231C3470001EC42E /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPerformerTests.swift; sourceTree = "<group>"; };
+		E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
+		E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 			children = (
 				E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */,
 				E8F5D53C231BEE9B001EC42E /* Headlines */,
+				E8F5D558231C3451001EC42E /* Networking */,
 				E8F5D528231BE869001EC42E /* Info.plist */,
 				E8F5D548231BF519001EC42E /* BBCTopStoriesTests-Bridging-Header.h */,
 			);
@@ -184,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D54B231BF57B001EC42E /* Storyboards */,
+				E8F5D55F231C42B5001EC42E /* Views */,
 			);
 			path = Headlines;
 			sourceTree = "<group>";
@@ -219,6 +229,24 @@
 				E8F5D556231C0BCD001EC42E /* Story.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E8F5D558231C3451001EC42E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D559231C3470001EC42E /* MockURLSession.swift */,
+				E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */,
+				E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E8F5D55F231C42B5001EC42E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,8 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */,
+				E8F5D55A231C3470001EC42E /* MockURLSession.swift in Sources */,
+				E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */,
 				E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */,
 				E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */,
+				E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
