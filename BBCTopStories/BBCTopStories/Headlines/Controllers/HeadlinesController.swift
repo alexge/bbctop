@@ -18,7 +18,7 @@ final class HeadlinesController: NSObject {
     private var currentPage: Int = 0
     private var moreResults: Bool = true {
         didSet {
-//            listViewController.moreResults = moreResults
+            listViewController.moreResults = moreResults
         }
     }
     
@@ -65,5 +65,11 @@ final class HeadlinesController: NSObject {
                 strongSelf.isLoading = false
             }
         }
+    }
+}
+
+extension HeadlinesController: HeadlinesListViewControllerDelegate {
+    func willReachBottom() {
+        loadNextPage()
     }
 }

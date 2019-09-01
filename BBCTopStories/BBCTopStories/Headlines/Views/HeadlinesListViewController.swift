@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HeadlinesListViewControllerDelegate: class {
+    func willReachBottom()
+}
+
 final class HeadlinesListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView! {
@@ -24,6 +28,9 @@ final class HeadlinesListViewController: UIViewController {
             }
         }
     }
+    
+    weak var delegate: HeadlinesListViewControllerDelegate?
+    var moreResults: Bool = true
 }
 
 extension HeadlinesListViewController: UITableViewDelegate {
@@ -42,6 +49,16 @@ extension HeadlinesListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeadlinesCell") as! HeadlinesCell
         cell.bind(stories[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard indexPath.row == stories.count - 1 else { return }
+        if moreResults {
+            tableView.tableFooterView?.isHidden = false
+            delegate?.willReachBottom()
+        } else {
+            tableView.tableFooterView?.isHidden = true
+        }
     }
 }
 
