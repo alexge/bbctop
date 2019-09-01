@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "Kingfisher.h"
 
-FOUNDATION_EXPORT double Pods_BBCTopStoriesTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BBCTopStoriesTestsVersionString[];
+FOUNDATION_EXPORT double KingfisherVersionNumber;
+FOUNDATION_EXPORT const unsigned char KingfisherVersionString[];
 
