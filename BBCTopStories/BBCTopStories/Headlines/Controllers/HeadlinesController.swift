@@ -58,7 +58,9 @@ final class HeadlinesController: NSObject {
                 if stories.count < 20 {
                     strongSelf.moreResults = false
                 }
-                strongSelf.stories.append(contentsOf: stories)
+                var newStories = strongSelf.stories
+                newStories.append(contentsOf: stories)
+                strongSelf.stories = newStories.sorted(by: { $0.date > $1.date })
                 strongSelf.currentPage += 1
                 strongSelf.isLoading = false
             }
