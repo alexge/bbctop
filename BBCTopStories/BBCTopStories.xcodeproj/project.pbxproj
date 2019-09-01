@@ -19,6 +19,7 @@
 		E8F5D543231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D542231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift */; };
 		E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */; };
 		E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D54C231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift */; };
+		E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D54E231BFA0D001EC42E /* HeadlinesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E8F5D548231BF519001EC42E /* BBCTopStoriesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCTopStoriesTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8F5D549231BF51A001EC42E /* StoryboardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsTests.swift; sourceTree = "<group>"; };
 		E8F5D54C231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesStoryboardScenesTests.swift; sourceTree = "<group>"; };
+		E8F5D54E231BFA0D001EC42E /* HeadlinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D53A231BED15001EC42E /* HeadlinesListViewController.swift */,
+				E8F5D54E231BFA0D001EC42E /* HeadlinesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				E8F5D53E231BEEE3001EC42E /* Storyboards.swift in Sources */,
 				E8F5D512231BE867001EC42E /* AppDelegate.swift in Sources */,
 				E8F5D539231BEBA9001EC42E /* HeadlinesController.swift in Sources */,
+				E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */,
 				E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */,
 				E8F5D543231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift in Sources */,
 			);
