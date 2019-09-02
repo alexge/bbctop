@@ -34,70 +34,31 @@ class JSONParserTests: XCTestCase {
                                     ]
         ]
     ]
+    
+    var validData: Data {
+        return try! JSONSerialization.data(withJSONObject: validJSON, options: .prettyPrinted)
+    }
 
     func testParseForStories_WithValidJson_ShouldReturnStories() {
         // Arrange
         let parser = JSONParser()
         
         // Act
-        let stories = parser.stories(from: validJSON)
+        let responseModel = parser.responseModel(from: validData)
         
         // Assert
-        XCTAssert(stories.count == 2)
+        XCTAssert(responseModel!.articles!.count == 2)
     }
     
     func testParseForStories_WithInvalidJson_ShouldNotReturnStories() {
         // Arrange
         let parser = JSONParser()
+        let data = try! JSONSerialization.data(withJSONObject: ["hello":"goodbye"], options: .prettyPrinted)
         
         // Act
-        let stories = parser.stories(from: ["hello":"goodbye"])
+        let responseModel = parser.responseModel(from: data)
         
         // Assert
-        XCTAssert(stories.isEmpty)
-    }
-    
-    func testParseForStories_WithCorrectTopLevelKeysAndIncorrectArticlesJSON_ShouldNotReturnStories() {
-        // Arrange
-        let invalidJSON: [String:Any] = ["status":"ok",
-                                         "totalResults":10,
-                                         "articles":[
-                                            [
-                                                "hello":"goodbye"
-                                            ],
-                                            [
-                                                "yes":"no"
-                                            ]
-                                         ]
-                                        ]
-        let parser = JSONParser()
-        
-        // Act
-        let stories = parser.stories(from: invalidJSON)
-        
-        // Assert
-        XCTAssert(stories.isEmpty)
-    }
-    
-    func testParseForStories_WithoutArticlesJSON_ShouldNotReturnStories() {
-        // Arrange
-        let invalidJSON: [String:Any] = ["status":"ok",
-                                         "totalResults":10,
-                                         "stuff":[
-                                            [
-                                                "hello":"goodbye"
-                                            ],
-                                            [
-                                                "yes":"no"
-                                            ]
-            ]
-        ]
-        let parser = JSONParser()
-        
-        // Act
-        let stories = parser.stories(from: invalidJSON)
-        
-        // Assert
-        XCTAssert(stories.isEmpty)
+        XCTAssertNil(responseModel)
     }
 }
