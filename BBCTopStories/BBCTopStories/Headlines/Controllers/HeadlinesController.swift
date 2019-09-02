@@ -10,7 +10,6 @@ import UIKit
 
 final class HeadlinesController: NSObject {
     
-    private let navController: UINavigationController
     private let listViewController: HeadlinesListViewController
     
     private var requestPerformer: RequestPerformable
@@ -28,8 +27,7 @@ final class HeadlinesController: NSObject {
         }
     }
     
-    init(navigationController: UINavigationController, requestPerformer: RequestPerformable = RequestPerformer()) {
-        navController = navigationController
+    init(requestPerformer: RequestPerformable = RequestPerformer()) {
         guard let viewController: HeadlinesListViewController = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlinesList) else {
             listViewController = HeadlinesListViewController()
             self.requestPerformer = requestPerformer
@@ -41,11 +39,13 @@ final class HeadlinesController: NSObject {
         
         super.init()
         
-        navController.setViewControllers([listViewController], animated: false)
-        
         listViewController.title = "BBC"
         
         loadNextPage()
+    }
+    
+    func initialViewController() -> UIViewController {
+        return listViewController
     }
     
     private func loadNextPage() {

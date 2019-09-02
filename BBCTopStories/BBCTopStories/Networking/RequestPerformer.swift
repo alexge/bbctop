@@ -28,22 +28,20 @@ final class RequestPerformer: RequestPerformable {
         urlRequest.httpMethod = "GET"
         
         let task = urlSession.dataTask(with: urlRequest) { [weak self] data, response, error in
+            guard self != nil else { return }
+            
             guard let data = data else {
                 print(error?.localizedDescription)
                 return
             }
-            var serializedJSONResponse: Any
-            do {
-                serializedJSONResponse = try JSONSerialization.jsonObject(with: data, options: [])
-            } catch {
-                print(error.localizedDescription)
-                return
-            }
+            guard let responseModel = JSONParser().responseModel(from: data) else { return }
             
-            guard let json = serializedJSONResponse as? [String:Any] else { return }
-            let jsonParser = JSONParser()
-            let stories = jsonParser.stories(from: json)
-            successHandler(stories)
+            if let stories = responseModel.articles {
+                successHandler(stories)
+            } else {
+                print(responseModel.code!)
+                print(responseModel.message!)
+            }
         }
         task.resume()
     }

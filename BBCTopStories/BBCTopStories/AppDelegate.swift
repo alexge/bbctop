@@ -13,16 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var headlinesController: HeadlinesController?
-    var navigationController = UINavigationController()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Setup Window
         let window = UIWindow()
         self.window = window
         
-        headlinesController = HeadlinesController(navigationController: navigationController)
+        let navigationController = UINavigationController()
+        
+        let headlinesController = HeadlinesController()
+
+        navigationController.setViewControllers([headlinesController.initialViewController()], animated: false)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

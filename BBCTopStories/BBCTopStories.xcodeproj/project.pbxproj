@@ -27,6 +27,7 @@
 		E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */; };
 		E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */; };
 		E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */; };
+		E8F5D567231D6391001EC42E /* StoryListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPerformerTests.swift; sourceTree = "<group>"; };
 		E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
 		E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesCellTests.swift; sourceTree = "<group>"; };
+		E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				E8F5D551231BFCD1001EC42E /* RequestPerformer.swift */,
 				E8F5D553231C08A6001EC42E /* JSONParser.swift */,
+				E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				E8F5D554231C08A6001EC42E /* JSONParser.swift in Sources */,
 				E8F5D512231BE867001EC42E /* AppDelegate.swift in Sources */,
 				E8F5D539231BEBA9001EC42E /* HeadlinesController.swift in Sources */,
+				E8F5D567231D6391001EC42E /* StoryListResponseModel.swift in Sources */,
 				E8F5D552231BFCD1001EC42E /* RequestPerformer.swift in Sources */,
 				E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */,
 				E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */,
