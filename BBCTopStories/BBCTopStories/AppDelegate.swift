@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let headlinesFlow = HeadlinesFlowController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -20,10 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         let navigationController = UINavigationController()
-        
-        let headlinesController = HeadlinesController()
 
-        navigationController.setViewControllers([headlinesController.initialViewController()], animated: false)
+        navigationController.setViewControllers([headlinesFlow.initialViewController()], animated: false)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

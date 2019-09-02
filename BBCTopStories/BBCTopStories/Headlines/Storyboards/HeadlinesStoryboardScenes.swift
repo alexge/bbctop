@@ -10,6 +10,7 @@ import Foundation
 
 enum HeadlinesStoryboardScenes: String, SceneRepresentable, CaseIterable {
     case headlinesList
+    case headlineDetail
     
     var identifier: String {
         return rawValue

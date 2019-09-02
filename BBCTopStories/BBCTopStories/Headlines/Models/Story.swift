@@ -38,4 +38,14 @@ struct Story: Codable {
         description = try keyedContainer.decode(String.self, forKey: .description)
         content = try keyedContainer.decodeIfPresent(String.self, forKey: .content)
     }
+    
+    #if DEBUG
+    init() {
+        self.headline = "title"
+        self.description = "description"
+        self.date = Date()
+        self.imageURL = URL(string: "wwww.google.com")!
+        self.content = "content"
+    }
+    #endif
 }

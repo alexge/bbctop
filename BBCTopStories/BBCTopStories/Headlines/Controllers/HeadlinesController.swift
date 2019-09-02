@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HeadlinesControllerDelegate: class {
+    func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story)
+}
+
 final class HeadlinesController: NSObject {
     
     private let listViewController: HeadlinesListViewController
@@ -27,6 +31,8 @@ final class HeadlinesController: NSObject {
         }
     }
     
+    weak var delegate: HeadlinesControllerDelegate?
+    
     init(requestPerformer: RequestPerformable = RequestPerformer()) {
         guard let viewController: HeadlinesListViewController = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlinesList) else {
             listViewController = HeadlinesListViewController()
@@ -39,12 +45,11 @@ final class HeadlinesController: NSObject {
         
         super.init()
         
-        listViewController.title = "BBC"
-        
+        listViewController.delegate = self
         loadNextPage()
     }
     
-    func initialViewController() -> UIViewController {
+    func viewController() -> HeadlinesListViewController {
         return listViewController
     }
     
@@ -69,7 +74,20 @@ final class HeadlinesController: NSObject {
 }
 
 extension HeadlinesController: HeadlinesListViewControllerDelegate {
-    func willReachBottom() {
+    
+    func headlinesListDidReachBottom(_ headlinesList: HeadlinesListViewController) {
         loadNextPage()
     }
+    
+    func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story) {
+        delegate?.headlinesList(headlinesList, didSelectHeadline: story)
+    }
 }
+
+#if DEBUG
+extension HeadlinesController {
+    var exposedList: HeadlinesListViewController {
+        return listViewController
+    }
+}
+#endif

@@ -28,6 +28,9 @@
 		E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */; };
 		E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */; };
 		E8F5D567231D6391001EC42E /* StoryListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */; };
+		E8F5D569231D7739001EC42E /* HeadlineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D568231D7739001EC42E /* HeadlineDetailViewController.swift */; };
+		E8F5D56B231D7935001EC42E /* HeadlinesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D56A231D7935001EC42E /* HeadlinesFlowController.swift */; };
+		E8F5D56E231D8D15001EC42E /* HeadlinesFlowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D56D231D8D15001EC42E /* HeadlinesFlowControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserTests.swift; sourceTree = "<group>"; };
 		E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesCellTests.swift; sourceTree = "<group>"; };
 		E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListResponseModel.swift; sourceTree = "<group>"; };
+		E8F5D568231D7739001EC42E /* HeadlineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineDetailViewController.swift; sourceTree = "<group>"; };
+		E8F5D56A231D7935001EC42E /* HeadlinesFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesFlowController.swift; sourceTree = "<group>"; };
+		E8F5D56D231D8D15001EC42E /* HeadlinesFlowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesFlowControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 		E8F5D535231BEACA001EC42E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8F5D56A231D7935001EC42E /* HeadlinesFlowController.swift */,
 				E8F5D538231BEBA9001EC42E /* HeadlinesController.swift */,
 			);
 			path = Controllers;
@@ -176,6 +183,7 @@
 			children = (
 				E8F5D53A231BED15001EC42E /* HeadlinesListViewController.swift */,
 				E8F5D54E231BFA0D001EC42E /* HeadlinesCell.swift */,
+				E8F5D568231D7739001EC42E /* HeadlineDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 		E8F5D53C231BEE9B001EC42E /* Headlines */ = {
 			isa = PBXGroup;
 			children = (
+				E8F5D56C231D8CFD001EC42E /* Controllers */,
 				E8F5D54B231BF57B001EC42E /* Storyboards */,
 				E8F5D55F231C42B5001EC42E /* Views */,
 			);
@@ -250,6 +259,14 @@
 				E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E8F5D56C231D8CFD001EC42E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D56D231D8D15001EC42E /* HeadlinesFlowControllerTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,9 +421,11 @@
 				E8F5D512231BE867001EC42E /* AppDelegate.swift in Sources */,
 				E8F5D539231BEBA9001EC42E /* HeadlinesController.swift in Sources */,
 				E8F5D567231D6391001EC42E /* StoryListResponseModel.swift in Sources */,
+				E8F5D56B231D7935001EC42E /* HeadlinesFlowController.swift in Sources */,
 				E8F5D552231BFCD1001EC42E /* RequestPerformer.swift in Sources */,
 				E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */,
 				E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */,
+				E8F5D569231D7739001EC42E /* HeadlineDetailViewController.swift in Sources */,
 				E8F5D543231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift in Sources */,
 				E8F5D557231C0BCD001EC42E /* Story.swift in Sources */,
 			);
@@ -418,6 +437,7 @@
 			files = (
 				E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */,
 				E8F5D55A231C3470001EC42E /* MockURLSession.swift in Sources */,
+				E8F5D56E231D8D15001EC42E /* HeadlinesFlowControllerTests.swift in Sources */,
 				E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */,
 				E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */,
 				E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */,

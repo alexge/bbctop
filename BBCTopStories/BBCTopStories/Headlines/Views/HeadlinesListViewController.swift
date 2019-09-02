@@ -9,7 +9,8 @@
 import UIKit
 
 protocol HeadlinesListViewControllerDelegate: class {
-    func willReachBottom()
+    func headlinesListDidReachBottom(_ headlinesList: HeadlinesListViewController)
+    func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story)
 }
 
 final class HeadlinesListViewController: UIViewController {
@@ -31,11 +32,17 @@ final class HeadlinesListViewController: UIViewController {
     
     weak var delegate: HeadlinesListViewControllerDelegate?
     var moreResults: Bool = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "BBC"
+    }
 }
 
 extension HeadlinesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.headlinesList(self, didSelectHeadline: stories[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -55,9 +62,17 @@ extension HeadlinesListViewController: UITableViewDataSource {
         guard indexPath.row == stories.count - 1 else { return }
         if moreResults {
             tableView.tableFooterView?.isHidden = false
-            delegate?.willReachBottom()
+            delegate?.headlinesListDidReachBottom(self)
         } else {
             tableView.tableFooterView?.isHidden = true
         }
     }
 }
+
+#if DEBUG
+extension HeadlinesListViewController {
+    var exposedTableView: UITableView {
+        return tableView
+    }
+}
+#endif
