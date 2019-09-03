@@ -44,6 +44,29 @@
 		E8F5D58B231F00E1001EC42E /* FavoriteHeadlinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58A231F00E1001EC42E /* FavoriteHeadlinesController.swift */; };
 		E8F5D58D231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58C231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift */; };
 		E8F5D58F231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58E231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift */; };
+		E8F5D594231F19CD001EC42E /* Array+SceneRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D540231BEFAE001EC42E /* Array+SceneRepresentable.swift */; };
+		E8F5D595231F19CD001EC42E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D53D231BEEE3001EC42E /* Storyboards.swift */; };
+		E8F5D596231F19CD001EC42E /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D553231C08A6001EC42E /* JSONParser.swift */; };
+		E8F5D597231F19CD001EC42E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D511231BE867001EC42E /* AppDelegate.swift */; };
+		E8F5D598231F19CD001EC42E /* HeadlinesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D538231BEBA9001EC42E /* HeadlinesListController.swift */; };
+		E8F5D599231F19CD001EC42E /* FavoritesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D575231D925C001EC42E /* FavoritesCache.swift */; };
+		E8F5D59A231F19CD001EC42E /* StoryListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D566231D6391001EC42E /* StoryListResponseModel.swift */; };
+		E8F5D59B231F19CD001EC42E /* HeadlinesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D56A231D7935001EC42E /* HeadlinesFlowController.swift */; };
+		E8F5D59C231F19CD001EC42E /* RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D551231BFCD1001EC42E /* RequestPerformer.swift */; };
+		E8F5D59D231F19CD001EC42E /* HeadlinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D54E231BFA0D001EC42E /* HeadlinesCell.swift */; };
+		E8F5D59E231F19CD001EC42E /* FavoriteHeadlinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58A231F00E1001EC42E /* FavoriteHeadlinesController.swift */; };
+		E8F5D59F231F19CD001EC42E /* HeadlineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D577231E9D98001EC42E /* HeadlineDetailController.swift */; };
+		E8F5D5A0231F19CD001EC42E /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D573231D9228001EC42E /* FavoritesManager.swift */; };
+		E8F5D5A1231F19CD001EC42E /* HeadlinesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D53A231BED15001EC42E /* HeadlinesListViewController.swift */; };
+		E8F5D5A2231F19CD001EC42E /* HeadlineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D568231D7739001EC42E /* HeadlineDetailViewController.swift */; };
+		E8F5D5A3231F19CD001EC42E /* HeadlinesStoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D542231BF0D7001EC42E /* HeadlinesStoryboardScenes.swift */; };
+		E8F5D5A4231F19CD001EC42E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D556231C0BCD001EC42E /* Story.swift */; };
+		E8F5D5A6231F19CD001EC42E /* Pods_BBCTopStories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD7D56F362E9879C6A1B54C /* Pods_BBCTopStories.framework */; };
+		E8F5D5A8231F19CD001EC42E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D51A231BE869001EC42E /* LaunchScreen.storyboard */; };
+		E8F5D5A9231F19CD001EC42E /* Headlines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D531231BEA98001EC42E /* Headlines.storyboard */; };
+		E8F5D5AA231F19CD001EC42E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D518231BE869001EC42E /* Assets.xcassets */; };
+		E8F5D5B2231F1A85001EC42E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5B1231F1A85001EC42E /* File.swift */; };
+		E8F5D5B3231F1A85001EC42E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5B1231F1A85001EC42E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +124,9 @@
 		E8F5D58A231F00E1001EC42E /* FavoriteHeadlinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHeadlinesController.swift; sourceTree = "<group>"; };
 		E8F5D58C231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesLisViewControllerTests.swift; sourceTree = "<group>"; };
 		E8F5D58E231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHeadlinesControllerTests.swift; sourceTree = "<group>"; };
+		E8F5D5AF231F19CD001EC42E /* NYTTopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTTopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F5D5B1231F1A85001EC42E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E8F5D5D4231F1ABC001EC42E /* NYTTopStories.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = NYTTopStories.plist; path = /Users/alexander.ge/Desktop/bbctop/BBCTopStories/NYTTopStories.plist; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +142,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8F5D5A5231F19CD001EC42E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F5D5A6231F19CD001EC42E /* Pods_BBCTopStories.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +189,7 @@
 			children = (
 				E8F5D50E231BE867001EC42E /* BBCTopStories.app */,
 				E8F5D522231BE869001EC42E /* BBCTopStoriesTests.xctest */,
+				E8F5D5AF231F19CD001EC42E /* NYTTopStories.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +205,8 @@
 				E8F5D518231BE869001EC42E /* Assets.xcassets */,
 				E8F5D51A231BE869001EC42E /* LaunchScreen.storyboard */,
 				E8F5D51D231BE869001EC42E /* Info.plist */,
+				E8F5D5D4231F1ABC001EC42E /* NYTTopStories.plist */,
+				E8F5D5B1231F1A85001EC42E /* File.swift */,
 			);
 			path = BBCTopStories;
 			sourceTree = "<group>";
@@ -364,6 +401,25 @@
 			productReference = E8F5D522231BE869001EC42E /* BBCTopStoriesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E8F5D591231F19CD001EC42E /* NYTTopStories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8F5D5AC231F19CD001EC42E /* Build configuration list for PBXNativeTarget "NYTTopStories" */;
+			buildPhases = (
+				E8F5D592231F19CD001EC42E /* [CP] Check Pods Manifest.lock */,
+				E8F5D593231F19CD001EC42E /* Sources */,
+				E8F5D5A5231F19CD001EC42E /* Frameworks */,
+				E8F5D5A7231F19CD001EC42E /* Resources */,
+				E8F5D5AB231F19CD001EC42E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NYTTopStories;
+			productName = BBCTopStories;
+			productReference = E8F5D5AF231F19CD001EC42E /* NYTTopStories.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,6 +454,7 @@
 			projectRoot = "";
 			targets = (
 				E8F5D50D231BE867001EC42E /* BBCTopStories */,
+				E8F5D591231F19CD001EC42E /* NYTTopStories */,
 				E8F5D521231BE869001EC42E /* BBCTopStoriesTests */,
 			);
 		};
@@ -418,6 +475,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8F5D5A7231F19CD001EC42E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F5D5A8231F19CD001EC42E /* LaunchScreen.storyboard in Resources */,
+				E8F5D5A9231F19CD001EC42E /* Headlines.storyboard in Resources */,
+				E8F5D5AA231F19CD001EC42E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +511,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F5D592231F19CD001EC42E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBCTopStories-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F5D5AB231F19CD001EC42E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BBCTopStories/Pods-BBCTopStories-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BBCTopStories/Pods-BBCTopStories-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BBCTopStories/Pods-BBCTopStories-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F068C511C12AD137CD8CA068 /* [CP] Embed Pods Frameworks */ = {
@@ -477,6 +583,7 @@
 				E8F5D539231BEBA9001EC42E /* HeadlinesListController.swift in Sources */,
 				E8F5D576231D925C001EC42E /* FavoritesCache.swift in Sources */,
 				E8F5D567231D6391001EC42E /* StoryListResponseModel.swift in Sources */,
+				E8F5D5B2231F1A85001EC42E /* File.swift in Sources */,
 				E8F5D56B231D7935001EC42E /* HeadlinesFlowController.swift in Sources */,
 				E8F5D552231BFCD1001EC42E /* RequestPerformer.swift in Sources */,
 				E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */,
@@ -510,6 +617,31 @@
 				E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */,
 				E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */,
 				E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8F5D593231F19CD001EC42E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F5D594231F19CD001EC42E /* Array+SceneRepresentable.swift in Sources */,
+				E8F5D595231F19CD001EC42E /* Storyboards.swift in Sources */,
+				E8F5D596231F19CD001EC42E /* JSONParser.swift in Sources */,
+				E8F5D597231F19CD001EC42E /* AppDelegate.swift in Sources */,
+				E8F5D598231F19CD001EC42E /* HeadlinesListController.swift in Sources */,
+				E8F5D599231F19CD001EC42E /* FavoritesCache.swift in Sources */,
+				E8F5D59A231F19CD001EC42E /* StoryListResponseModel.swift in Sources */,
+				E8F5D5B3231F1A85001EC42E /* File.swift in Sources */,
+				E8F5D59B231F19CD001EC42E /* HeadlinesFlowController.swift in Sources */,
+				E8F5D59C231F19CD001EC42E /* RequestPerformer.swift in Sources */,
+				E8F5D59D231F19CD001EC42E /* HeadlinesCell.swift in Sources */,
+				E8F5D59E231F19CD001EC42E /* FavoriteHeadlinesController.swift in Sources */,
+				E8F5D59F231F19CD001EC42E /* HeadlineDetailController.swift in Sources */,
+				E8F5D5A0231F19CD001EC42E /* FavoritesManager.swift in Sources */,
+				E8F5D5A1231F19CD001EC42E /* HeadlinesListViewController.swift in Sources */,
+				E8F5D5A2231F19CD001EC42E /* HeadlineDetailViewController.swift in Sources */,
+				E8F5D5A3231F19CD001EC42E /* HeadlinesStoryboardScenes.swift in Sources */,
+				E8F5D5A4231F19CD001EC42E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +797,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG BBC";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -684,6 +817,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BBC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -736,6 +870,46 @@
 			};
 			name = Release;
 		};
+		E8F5D5AD231F19CD001EC42E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8111A750307C90AD1D00A45 /* Pods-BBCTopStories.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LU4SWMQRX;
+				INFOPLIST_FILE = NYTTopStories.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStories;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG NYT";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8F5D5AE231F19CD001EC42E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741FAAD46AFF9CC90D888FBD /* Pods-BBCTopStories.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LU4SWMQRX;
+				INFOPLIST_FILE = NYTTopStories.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ge.BBCTopStories;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = NYT;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -762,6 +936,15 @@
 			buildConfigurations = (
 				E8F5D52F231BE869001EC42E /* Debug */,
 				E8F5D530231BE869001EC42E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8F5D5AC231F19CD001EC42E /* Build configuration list for PBXNativeTarget "NYTTopStories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8F5D5AD231F19CD001EC42E /* Debug */,
+				E8F5D5AE231F19CD001EC42E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
