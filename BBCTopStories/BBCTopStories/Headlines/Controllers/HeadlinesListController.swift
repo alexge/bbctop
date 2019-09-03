@@ -10,6 +10,7 @@ import UIKit
 
 protocol HeadlinesControllerDelegate: class {
     func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story)
+    func headlinesListDidTapFavoritesButton(_ headlinesList: HeadlinesListViewController)
 }
 
 final class HeadlinesListController: NSObject {
@@ -74,7 +75,6 @@ final class HeadlinesListController: NSObject {
 }
 
 extension HeadlinesListController: HeadlinesListViewControllerDelegate {
-    
     func headlinesListDidReachBottom(_ headlinesList: HeadlinesListViewController) {
         loadNextPage()
     }
@@ -82,6 +82,12 @@ extension HeadlinesListController: HeadlinesListViewControllerDelegate {
     func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story) {
         delegate?.headlinesList(headlinesList, didSelectHeadline: story)
     }
+    
+    func headlinesListDidTapFavoritesButton(_ headlinesList: HeadlinesListViewController) {
+        delegate?.headlinesListDidTapFavoritesButton(headlinesList)
+    }
+    
+    func headlinesListWillAppear(_ headlinesList: HeadlinesListViewController) {}
 }
 
 #if DEBUG

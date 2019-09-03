@@ -13,7 +13,7 @@ protocol HeadlineDetailViewControllerDelegate: class {
     func didTapFavoritesButton()
 }
 
-class HeadlineDetailViewController: UIViewController {
+final class HeadlineDetailViewController: UIViewController {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!

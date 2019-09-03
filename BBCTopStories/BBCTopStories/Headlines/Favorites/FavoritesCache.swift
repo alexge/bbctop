@@ -16,7 +16,7 @@ protocol FavoritesCacher: class {
     func loadAllFromDisk() -> [Story]?
 }
 
-class FavoritesCache: FavoritesCacher {
+final class FavoritesCache: FavoritesCacher {
     private let directoryName = "BBCStoriesFavorites/"
     private let favoritesPath = "favoritesList"
     private let fileManager = FileManager.default

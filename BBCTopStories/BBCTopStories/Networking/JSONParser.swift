@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JSONParser {
+final class JSONParser {
     
     func responseModel(from data: Data) -> StoryListResponseModel? {
         do {

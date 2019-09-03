@@ -12,6 +12,7 @@ import Foundation
 class MockFavoritesManager: FavoritesManageable {
     
     private var isFavorite: Bool
+    private var favorites = [Story]()
     
     init(isFavorite: Bool) {
         self.isFavorite = isFavorite
@@ -22,9 +23,17 @@ class MockFavoritesManager: FavoritesManageable {
     }
     
     func setFavoriteStatus(story: Story, favorite: Bool) -> Bool {
+        if favorite {
+            favorites.append(story)
+        } else {
+            favorites.removeAll(where: { $0.date == story.date })
+        }
         isFavorite = !isFavorite
         return true
     }
     
+    func loadFavorites() -> [Story]? {
+        return favorites
+    }
     
 }

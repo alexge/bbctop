@@ -34,7 +34,9 @@ final class RequestPerformer: RequestPerformable {
                 print(error?.localizedDescription)
                 return
             }
-            guard let responseModel = JSONParser().responseModel(from: data) else { return }
+            guard let responseModel = JSONParser().responseModel(from: data) else {
+                return
+            }
             
             if let stories = responseModel.articles {
                 successHandler(stories)

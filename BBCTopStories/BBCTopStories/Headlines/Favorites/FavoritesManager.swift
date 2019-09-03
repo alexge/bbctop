@@ -11,9 +11,10 @@ import Foundation
 protocol FavoritesManageable: class {
     func isFavorite(story: Story) -> Bool
     func setFavoriteStatus(story: Story, favorite: Bool) -> Bool
+    func loadFavorites() -> [Story]?
 }
 
-class FavoritesManager: NSObject, FavoritesManageable {
+final class FavoritesManager: NSObject, FavoritesManageable {
     private var favoritesList = [String]()
     
     private let cache: FavoritesCacher
@@ -21,7 +22,7 @@ class FavoritesManager: NSObject, FavoritesManageable {
     init(cache: FavoritesCacher = FavoritesCache()) {
         self.cache = cache
         super.init()
-        loadFavorites()
+        loadFavoritesList()
     }
     
     func isFavorite(story: Story) -> Bool {
@@ -33,7 +34,7 @@ class FavoritesManager: NSObject, FavoritesManageable {
             if favoritesList.contains(story.headline) {
                 return true
             } else if cache.saveToDisk(story: story) {
-                loadFavorites()
+                loadFavoritesList()
                 return true
             } else {
                 return false
@@ -42,7 +43,7 @@ class FavoritesManager: NSObject, FavoritesManageable {
             if !favoritesList.contains(story.headline) {
                 return true
             } else if cache.removeFromDisk(story: story) {
-                loadFavorites()
+                loadFavoritesList()
                 return true
             } else {
                 return false
@@ -50,12 +51,16 @@ class FavoritesManager: NSObject, FavoritesManageable {
         }
     }
     
-    private func loadFavorites() {
+    func loadFavorites() -> [Story]? {
+        return cache.loadAllFromDisk()
+    }
+    
+    private func loadFavoritesList() {
         if let favorites = cache.loadFavorites() {
             favoritesList = favorites
         } else {
             if cache.createFavorites() {
-                loadFavorites()
+                loadFavoritesList()
             }
         }
     }

@@ -11,6 +11,8 @@ import UIKit
 protocol HeadlinesListViewControllerDelegate: class {
     func headlinesListDidReachBottom(_ headlinesList: HeadlinesListViewController)
     func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story)
+    func headlinesListDidTapFavoritesButton(_ headlinesList: HeadlinesListViewController)
+    func headlinesListWillAppear(_ headlinesList: HeadlinesListViewController)
 }
 
 final class HeadlinesListViewController: UIViewController {
@@ -22,10 +24,24 @@ final class HeadlinesListViewController: UIViewController {
         }
     }
     
+    @IBOutlet private weak var favoritesButton: UIButton!
+    
     var stories = [Story]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+            }
+        }
+    }
+    
+    var isFavoritesList: Bool = false {
+        didSet {
+            if isFavoritesList {
+                title = "Favorites"
+                favoritesButton.setTitle("Return to Top Headlines", for: .normal)
+            } else {
+                title = "BBC"
+                favoritesButton.setTitle("Go to Favorites", for: .normal)
             }
         }
     }
@@ -35,7 +51,20 @@ final class HeadlinesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "BBC"
+        if !isFavoritesList {
+            title = "BBC"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isFavoritesList {
+            delegate?.headlinesListWillAppear(self)
+        }
+    }
+    
+    @IBAction func favoritesButtonTapped(_ sender: Any) {
+        delegate?.headlinesListDidTapFavoritesButton(self)
     }
 }
 

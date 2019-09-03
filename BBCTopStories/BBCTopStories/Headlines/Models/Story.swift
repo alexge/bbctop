@@ -29,6 +29,12 @@ struct Story: Codable {
         return formatter
     }()
     
+    private static var decimalDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return formatter
+    }()
+    
     enum StoryDecodeError: Error {
         case invalidDateString
     }
@@ -37,10 +43,13 @@ struct Story: Codable {
         let keyedContainer = try aDecoder.container(keyedBy: Story.CodingKeys.self)
         headline = try keyedContainer.decode(String.self, forKey: .headline)
         let dateString = try keyedContainer.decode(String.self, forKey: .date)
-        guard let publishDate = Story.dateFormatter.date(from: dateString) else {
+        if let publishDate = Story.dateFormatter.date(from: dateString) {
+            date = publishDate
+        } else if let publishDate = Story.decimalDateFormatter.date(from: dateString) {
+            date = publishDate
+        } else {
             throw StoryDecodeError.invalidDateString
         }
-        date = publishDate
         imageURL = try keyedContainer.decode(URL.self, forKey: .imageURL)
         description = try keyedContainer.decode(String.self, forKey: .description)
         content = try keyedContainer.decodeIfPresent(String.self, forKey: .content)

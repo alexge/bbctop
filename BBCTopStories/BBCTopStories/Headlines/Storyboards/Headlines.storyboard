@@ -21,8 +21,26 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-Zg-tOc">
                                 <rect key="frame" x="20" y="44" width="374" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="RpR-Fj-Eme" userLabel="Header">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-7b-5ad">
+                                            <rect key="frame" x="135" y="7" width="104" height="30"/>
+                                            <state key="normal" title="Go to Favorites"/>
+                                            <connections>
+                                                <action selector="favoritesButtonTapped:" destination="U6X-zz-gqJ" eventType="touchUpInside" id="qyu-gK-fkr"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="gPy-7b-5ad" firstAttribute="centerY" secondItem="RpR-Fj-Eme" secondAttribute="centerY" id="JIe-8z-K39"/>
+                                        <constraint firstItem="gPy-7b-5ad" firstAttribute="centerX" secondItem="RpR-Fj-Eme" secondAttribute="centerX" id="Kvf-oa-j7e"/>
+                                    </constraints>
+                                </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="k8P-ji-sdC" userLabel="Footer">
-                                    <rect key="frame" x="0.0" y="140" width="374" height="44"/>
+                                    <rect key="frame" x="0.0" y="184" width="374" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-pv-Zmk">
@@ -37,7 +55,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeadlinesCell" rowHeight="112" id="vF4-bv-Ynn" customClass="HeadlinesCell" customModule="BBCTopStories" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="112"/>
+                                        <rect key="frame" x="0.0" y="72" width="374" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vF4-bv-Ynn" id="1pu-3I-3Io">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="111.5"/>
@@ -84,6 +102,7 @@
                         <viewLayoutGuide key="safeArea" id="7qX-2I-rlp"/>
                     </view>
                     <connections>
+                        <outlet property="favoritesButton" destination="gPy-7b-5ad" id="2eC-MN-Fyw"/>
                         <outlet property="tableView" destination="Vcz-Zg-tOc" id="Efp-hp-mSm"/>
                     </connections>
                 </viewController>

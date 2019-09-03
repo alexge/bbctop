@@ -10,6 +10,13 @@
 import XCTest
 
 class FavoritesCacheTests: XCTestCase {
+    
+    override func tearDown() {
+        super.tearDown()
+        var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        path.append(contentsOf: "BBCStoriesFavorites/")
+        try? FileManager.default.removeItem(atPath: path)
+    }
 
     func testCreateFavorites_ShouldCreateDirectoryAndEmptyList() {
         // Arrange

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeadlineDetailController: HeadlineDetailViewControllerDelegate {
+final class HeadlineDetailController: HeadlineDetailViewControllerDelegate {
     
     let viewController: HeadlineDetailViewController
     private let favoritesManager: FavoritesManageable
