@@ -34,6 +34,13 @@
 		E8F5D574231D9228001EC42E /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D573231D9228001EC42E /* FavoritesManager.swift */; };
 		E8F5D576231D925C001EC42E /* FavoritesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D575231D925C001EC42E /* FavoritesCache.swift */; };
 		E8F5D578231E9D98001EC42E /* HeadlineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D577231E9D98001EC42E /* HeadlineDetailController.swift */; };
+		E8F5D57C231EAB8F001EC42E /* HeadlineDetailControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D57B231EAB8F001EC42E /* HeadlineDetailControllerTests.swift */; };
+		E8F5D57E231EABE7001EC42E /* MockFavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D57D231EABE7001EC42E /* MockFavoritesManager.swift */; };
+		E8F5D580231EE5BF001EC42E /* MockRequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D57F231EE5BF001EC42E /* MockRequestPerformer.swift */; };
+		E8F5D582231EE639001EC42E /* HeadlinesListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D581231EE639001EC42E /* HeadlinesListControllerTests.swift */; };
+		E8F5D585231EEBC8001EC42E /* FavoritesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D584231EEBC8001EC42E /* FavoritesManagerTests.swift */; };
+		E8F5D587231EEBD3001EC42E /* FavoritesCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D586231EEBD3001EC42E /* FavoritesCacheTests.swift */; };
+		E8F5D589231EF9CD001EC42E /* MockFavoritesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,13 @@
 		E8F5D573231D9228001EC42E /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		E8F5D575231D925C001EC42E /* FavoritesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCache.swift; sourceTree = "<group>"; };
 		E8F5D577231E9D98001EC42E /* HeadlineDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineDetailController.swift; sourceTree = "<group>"; };
+		E8F5D57B231EAB8F001EC42E /* HeadlineDetailControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineDetailControllerTests.swift; sourceTree = "<group>"; };
+		E8F5D57D231EABE7001EC42E /* MockFavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoritesManager.swift; sourceTree = "<group>"; };
+		E8F5D57F231EE5BF001EC42E /* MockRequestPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestPerformer.swift; sourceTree = "<group>"; };
+		E8F5D581231EE639001EC42E /* HeadlinesListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesListControllerTests.swift; sourceTree = "<group>"; };
+		E8F5D584231EEBC8001EC42E /* FavoritesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManagerTests.swift; sourceTree = "<group>"; };
+		E8F5D586231EEBD3001EC42E /* FavoritesCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCacheTests.swift; sourceTree = "<group>"; };
+		E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoritesCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +227,7 @@
 				E8F5D56C231D8CFD001EC42E /* Controllers */,
 				E8F5D54B231BF57B001EC42E /* Storyboards */,
 				E8F5D55F231C42B5001EC42E /* Views */,
+				E8F5D583231EEB96001EC42E /* Favorites */,
 			);
 			path = Headlines;
 			sourceTree = "<group>";
@@ -257,6 +272,7 @@
 				E8F5D559231C3470001EC42E /* MockURLSession.swift */,
 				E8F5D55B231C3566001EC42E /* RequestPerformerTests.swift */,
 				E8F5D55D231C3F19001EC42E /* JSONParserTests.swift */,
+				E8F5D57F231EE5BF001EC42E /* MockRequestPerformer.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -273,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D56D231D8D15001EC42E /* HeadlinesFlowControllerTests.swift */,
+				E8F5D581231EE639001EC42E /* HeadlinesListControllerTests.swift */,
+				E8F5D57B231EAB8F001EC42E /* HeadlineDetailControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,6 +300,17 @@
 			children = (
 				E8F5D573231D9228001EC42E /* FavoritesManager.swift */,
 				E8F5D575231D925C001EC42E /* FavoritesCache.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		E8F5D583231EEB96001EC42E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D57D231EABE7001EC42E /* MockFavoritesManager.swift */,
+				E8F5D584231EEBC8001EC42E /* FavoritesManagerTests.swift */,
+				E8F5D586231EEBD3001EC42E /* FavoritesCacheTests.swift */,
+				E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -455,10 +484,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F5D580231EE5BF001EC42E /* MockRequestPerformer.swift in Sources */,
 				E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */,
 				E8F5D55A231C3470001EC42E /* MockURLSession.swift in Sources */,
+				E8F5D57C231EAB8F001EC42E /* HeadlineDetailControllerTests.swift in Sources */,
+				E8F5D57E231EABE7001EC42E /* MockFavoritesManager.swift in Sources */,
 				E8F5D56E231D8D15001EC42E /* HeadlinesFlowControllerTests.swift in Sources */,
+				E8F5D589231EF9CD001EC42E /* MockFavoritesCache.swift in Sources */,
+				E8F5D587231EEBD3001EC42E /* FavoritesCacheTests.swift in Sources */,
 				E8F5D55E231C3F19001EC42E /* JSONParserTests.swift in Sources */,
+				E8F5D585231EEBC8001EC42E /* FavoritesManagerTests.swift in Sources */,
+				E8F5D582231EE639001EC42E /* HeadlinesListControllerTests.swift in Sources */,
 				E8F5D54A231BF51A001EC42E /* StoryboardsTests.swift in Sources */,
 				E8F5D54D231BF5A8001EC42E /* HeadlinesStoryboardScenesTests.swift in Sources */,
 				E8F5D561231C42D4001EC42E /* HeadlinesCellTests.swift in Sources */,

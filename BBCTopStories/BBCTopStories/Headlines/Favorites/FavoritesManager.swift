@@ -8,12 +8,18 @@
 
 import Foundation
 
-class FavoritesManager: NSObject {
-    var favoritesList = [String]()
+protocol FavoritesManageable: class {
+    func isFavorite(story: Story) -> Bool
+    func setFavoriteStatus(story: Story, favorite: Bool) -> Bool
+}
+
+class FavoritesManager: NSObject, FavoritesManageable {
+    private var favoritesList = [String]()
     
-    private let cache = FavoritesCache()
+    private let cache: FavoritesCacher
     
-    override init() {
+    init(cache: FavoritesCacher = FavoritesCache()) {
+        self.cache = cache
         super.init()
         loadFavorites()
     }
@@ -42,17 +48,23 @@ class FavoritesManager: NSObject {
                 return false
             }
         }
-        return false
     }
     
     private func loadFavorites() {
         if let favorites = cache.loadFavorites() {
             favoritesList = favorites
         } else {
-            cache.createFavorites { [weak self] created in
-                guard created else { return }
-                self?.loadFavorites()
+            if cache.createFavorites() {
+                loadFavorites()
             }
         }
     }
 }
+
+#if DEBUG
+extension FavoritesManager {
+    var exposedFavorites: [String] {
+        return favoritesList
+    }
+}
+#endif

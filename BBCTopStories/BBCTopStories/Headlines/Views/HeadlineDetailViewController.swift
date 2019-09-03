@@ -68,8 +68,16 @@ class HeadlineDetailViewController: UIViewController {
         }
     }
     
-    @IBAction func favoritesButtonTapped(_ sender: Any) {
+    @IBAction private func favoritesButtonTapped(_ sender: Any) {
         favoritesButton.isEnabled = false
         delegate?.didTapFavoritesButton()
     }
 }
+
+#if DEBUG
+extension HeadlineDetailViewController {
+    var exposedFavoritesButton: UIButton {
+        return favoritesButton
+    }
+}
+#endif

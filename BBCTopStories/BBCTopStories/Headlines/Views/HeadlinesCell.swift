@@ -19,3 +19,11 @@ final class HeadlinesCell: UITableViewCell {
         headlineImage.kf.setImage(with: story.imageURL)
     }
 }
+
+#if DEBUG
+extension HeadlinesCell {
+    var exposedTitle: String? {
+        return titleLabel.text
+    }
+}
+#endif

@@ -29,21 +29,38 @@ struct Story: Codable {
         return formatter
     }()
     
+    enum StoryDecodeError: Error {
+        case invalidDateString
+    }
+    
     init(from aDecoder: Decoder) throws {
         let keyedContainer = try aDecoder.container(keyedBy: Story.CodingKeys.self)
         headline = try keyedContainer.decode(String.self, forKey: .headline)
         let dateString = try keyedContainer.decode(String.self, forKey: .date)
-        date = Story.dateFormatter.date(from: dateString)!
+        guard let publishDate = Story.dateFormatter.date(from: dateString) else {
+            throw StoryDecodeError.invalidDateString
+        }
+        date = publishDate
         imageURL = try keyedContainer.decode(URL.self, forKey: .imageURL)
         description = try keyedContainer.decode(String.self, forKey: .description)
         content = try keyedContainer.decodeIfPresent(String.self, forKey: .content)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Story.CodingKeys.self)
+        try container.encode(headline, forKey: .headline)
+        try container.encode(Story.dateFormatter.string(from: date), forKey: .date)
+        try container.encode(imageURL.absoluteString, forKey: .imageURL)
+        try container.encode(description, forKey: .description)
+        try container.encodeIfPresent(content, forKey: .content)
     }
     
     #if DEBUG
     init() {
         self.headline = "title"
         self.description = "description"
-        self.date = Date()
+        let dateString = Story.dateFormatter.string(from: Date())
+        self.date = Story.dateFormatter.date(from: dateString)!
         self.imageURL = URL(string: "wwww.google.com")!
         self.content = "content"
     }

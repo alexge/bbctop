@@ -59,7 +59,7 @@ final class HeadlinesListController: NSObject {
         
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let strongSelf = self else { return }
-            self?.requestPerformer.fetchTopStories(page: strongSelf.currentPage + 1) { stories in
+            strongSelf.requestPerformer.fetchTopStories(page: strongSelf.currentPage + 1) { stories in
                 if stories.count < 20 {
                     strongSelf.moreResults = false
                 }

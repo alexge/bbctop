@@ -11,10 +11,10 @@ import UIKit
 class HeadlineDetailController: HeadlineDetailViewControllerDelegate {
     
     let viewController: HeadlineDetailViewController
-    private let favoritesManager: FavoritesManager
+    private let favoritesManager: FavoritesManageable
     private let story: Story
         
-    init(story: Story, favoritesManager: FavoritesManager = FavoritesManager()) {
+    init(story: Story, favoritesManager: FavoritesManageable = FavoritesManager()) {
         guard let viewController: HeadlineDetailViewController = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlineDetail) else {
             self.viewController = HeadlineDetailViewController()
             self.favoritesManager = favoritesManager
@@ -36,7 +36,7 @@ class HeadlineDetailController: HeadlineDetailViewControllerDelegate {
     }
     
     func didTapFavoritesButton() {
-        favoritesManager.setFavoriteStatus(story: story, favorite: !isFavorite)
+        _ = favoritesManager.setFavoriteStatus(story: story, favorite: !isFavorite)
         viewController.isFavorite = isFavorite
     }
 }

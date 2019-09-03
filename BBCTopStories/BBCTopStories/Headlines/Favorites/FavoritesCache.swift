@@ -8,10 +8,18 @@
 
 import Foundation
 
-class FavoritesCache {
-    let directoryName = "BBCStoriesFavorites/"
-    let favoritesPath = "favoritesList"
-    let fileManager = FileManager.default
+protocol FavoritesCacher: class {
+    func loadFavorites() -> [String]?
+    func createFavorites() -> Bool
+    func saveToDisk(story: Story) -> Bool
+    func removeFromDisk(story: Story) -> Bool
+    func loadAllFromDisk() -> [Story]?
+}
+
+class FavoritesCache: FavoritesCacher {
+    private let directoryName = "BBCStoriesFavorites/"
+    private let favoritesPath = "favoritesList"
+    private let fileManager = FileManager.default
     
     func loadFavorites() -> [String]? {
         var path = cachePath()
@@ -20,19 +28,19 @@ class FavoritesCache {
         return try? JSONDecoder().decode([String].self, from: data)
     }
     
-    func createFavorites(completion: (_ created: Bool) -> Void) {
+    func createFavorites() -> Bool {
         let path = cachePath()
         do {
             try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            completion(update(favoritesList: []))
+            return update(favoritesList: [])
         } catch {
             print(error.localizedDescription)
-            completion(false)
+            return false
         }
     }
     
     private func cachePath() -> String {
-        var path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
+        var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         path.append(contentsOf: directoryName)
         return path
     }
@@ -92,7 +100,7 @@ class FavoritesCache {
             path.append(contentsOf: favorite)
             if let data = fileManager.contents(atPath: path),
                 let story = try? JSONDecoder().decode(Story.self, from: data) {
-                
+
                 favoriteStories.append(story)
             }
         }

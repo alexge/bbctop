@@ -36,6 +36,6 @@ class HeadlinesFlowControllerTests: XCTestCase {
                 successExpectation.fulfill()
             }
         }
-        waitForExpectations(timeout: 2)
+        waitForExpectations(timeout: 5)
     }
 }
