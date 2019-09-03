@@ -39,9 +39,11 @@ final class HeadlinesListViewController: UIViewController {
             if isFavoritesList {
                 title = "Favorites"
                 favoritesButton.setTitle("Return to Top Headlines", for: .normal)
+                tableView.tableFooterView?.isHidden = true
             } else {
-                title = "BBC"
+                title = AppSource.current.title
                 favoritesButton.setTitle("Go to Favorites", for: .normal)
+                tableView.tableFooterView?.isHidden = !moreResults
             }
         }
     }
@@ -52,7 +54,7 @@ final class HeadlinesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if !isFavoritesList {
-            title = "BBC"
+            title = AppSource.current.title
         }
     }
     

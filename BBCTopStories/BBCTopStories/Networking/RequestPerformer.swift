@@ -16,6 +16,14 @@ final class RequestPerformer: RequestPerformable {
     
     private let basePath: String = "https://newsapi.org/v2/top-headlines"
     private let apiKey: String = "56ec127545f14bd6a0ce5c296b00cb2d"
+    var source: String {
+        switch AppSource.current {
+        case .bbc:
+            return "bbc-news"
+        case .nyt:
+            return "the-new-york-times"
+        }
+    }
     
     private let urlSession: URLSession
     
@@ -24,7 +32,7 @@ final class RequestPerformer: RequestPerformable {
     }
     
     func fetchTopStories(page: Int, successHandler: @escaping (([Story]) -> Void)) {
-        var urlRequest = URLRequest(url: url(for: .bbcNews, page: page))
+        var urlRequest = URLRequest(url: url(for: page))
         urlRequest.httpMethod = "GET"
         
         let task = urlSession.dataTask(with: urlRequest) { [weak self] data, response, error in
@@ -48,17 +56,13 @@ final class RequestPerformer: RequestPerformable {
         task.resume()
     }
     
-    private func url(for source: Source, page: Int) -> URL {
+    private func url(for page: Int) -> URL {
         var url = URLComponents(string: basePath)!
         url.queryItems = [
-            URLQueryItem(name: "sources", value: source.rawValue),
+            URLQueryItem(name: "sources", value: source),
             URLQueryItem(name: "page", value: String(page)),
             URLQueryItem(name: "apiKey", value: apiKey)
         ]
         return url.url!
     }
-}
-
-enum Source: String {
-    case bbcNews = "bbc-news"
 }

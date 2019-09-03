@@ -17,7 +17,14 @@ protocol FavoritesCacher: class {
 }
 
 final class FavoritesCache: FavoritesCacher {
-    private let directoryName = "BBCStoriesFavorites/"
+    private var directoryName: String {
+        switch AppSource.current {
+        case .bbc:
+            return "BBCStoriesFavorites/"
+        case .nyt:
+            return "NYCStoriesFavorites/"
+        }
+    }
     private let favoritesPath = "favoritesList"
     private let fileManager = FileManager.default
     
