@@ -44,7 +44,7 @@ final class HeadlinesFlowController: HeadlinesControllerDelegate {
 
 #if DEBUG
 extension HeadlinesFlowController {
-    var exposedController: HeadlinesListController {
+    var exposedListController: HeadlinesListController {
         return headlinesController
     }
 }

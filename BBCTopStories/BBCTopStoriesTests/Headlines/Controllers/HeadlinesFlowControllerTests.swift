@@ -24,7 +24,7 @@ class HeadlinesFlowControllerTests: XCTestCase {
         let nav = UINavigationController()
         let flowController = HeadlinesFlowController()
         nav.setViewControllers([flowController.initialViewController()], animated: false)
-        let listController = flowController.exposedController.exposedList
+        let listController = flowController.exposedListController.exposedList
         let successExpectation = expectation(description: "success")
         
         // Act

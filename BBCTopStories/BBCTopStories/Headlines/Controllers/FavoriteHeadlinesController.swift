@@ -33,6 +33,7 @@ final class FavoriteHeadlinesController {
         self.favoritesManager = favoritesManager
         
         listViewController.delegate = self
+        loadFavorites()
     }
     
     func viewController() -> HeadlinesListViewController {
@@ -61,3 +62,11 @@ extension FavoriteHeadlinesController: HeadlinesListViewControllerDelegate {
         loadFavorites()
     }
 }
+
+#if DEBUG
+extension FavoriteHeadlinesController {
+    var exposedList: HeadlinesListViewController {
+        return listViewController
+    }
+}
+#endif

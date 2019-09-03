@@ -42,6 +42,8 @@
 		E8F5D587231EEBD3001EC42E /* FavoritesCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D586231EEBD3001EC42E /* FavoritesCacheTests.swift */; };
 		E8F5D589231EF9CD001EC42E /* MockFavoritesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */; };
 		E8F5D58B231F00E1001EC42E /* FavoriteHeadlinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58A231F00E1001EC42E /* FavoriteHeadlinesController.swift */; };
+		E8F5D58D231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58C231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift */; };
+		E8F5D58F231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D58E231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		E8F5D586231EEBD3001EC42E /* FavoritesCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCacheTests.swift; sourceTree = "<group>"; };
 		E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoritesCache.swift; sourceTree = "<group>"; };
 		E8F5D58A231F00E1001EC42E /* FavoriteHeadlinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHeadlinesController.swift; sourceTree = "<group>"; };
+		E8F5D58C231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesLisViewControllerTests.swift; sourceTree = "<group>"; };
+		E8F5D58E231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHeadlinesControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F5D560231C42D4001EC42E /* HeadlinesCellTests.swift */,
+				E8F5D58C231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				E8F5D56D231D8D15001EC42E /* HeadlinesFlowControllerTests.swift */,
 				E8F5D581231EE639001EC42E /* HeadlinesListControllerTests.swift */,
 				E8F5D57B231EAB8F001EC42E /* HeadlineDetailControllerTests.swift */,
+				E8F5D58E231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -492,6 +498,8 @@
 				E8F5D55C231C3566001EC42E /* RequestPerformerTests.swift in Sources */,
 				E8F5D55A231C3470001EC42E /* MockURLSession.swift in Sources */,
 				E8F5D57C231EAB8F001EC42E /* HeadlineDetailControllerTests.swift in Sources */,
+				E8F5D58D231F0FE4001EC42E /* HeadlinesLisViewControllerTests.swift in Sources */,
+				E8F5D58F231F119D001EC42E /* FavoriteHeadlinesControllerTests.swift in Sources */,
 				E8F5D57E231EABE7001EC42E /* MockFavoritesManager.swift in Sources */,
 				E8F5D56E231D8D15001EC42E /* HeadlinesFlowControllerTests.swift in Sources */,
 				E8F5D589231EF9CD001EC42E /* MockFavoritesCache.swift in Sources */,

@@ -103,5 +103,9 @@ extension HeadlinesListViewController {
     var exposedTableView: UITableView {
         return tableView
     }
+    
+    var exposedButton: UIButton {
+        return favoritesButton
+    }
 }
 #endif
