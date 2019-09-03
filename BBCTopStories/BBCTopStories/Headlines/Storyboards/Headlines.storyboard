@@ -117,8 +117,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOJ-Aj-NdM">
+                                <rect key="frame" x="36" y="365" width="117" height="30"/>
+                                <state key="normal" title="Save to Favorites"/>
+                                <connections>
+                                    <action selector="favoritesButtonTapped:" destination="eSo-AL-0at" eventType="touchUpInside" id="u2N-ER-2CS"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g24-vv-XTE">
-                                <rect key="frame" x="36" y="365" width="342" height="20.5"/>
+                                <rect key="frame" x="36" y="419" width="342" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,10 +134,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iir-rG-ZyZ" firstAttribute="trailing" secondItem="krk-ns-0wU" secondAttribute="trailing" id="3ke-zc-hIs"/>
-                            <constraint firstItem="g24-vv-XTE" firstAttribute="top" secondItem="fnD-i1-tMt" secondAttribute="bottom" constant="24" id="DXH-qp-WZe"/>
                             <constraint firstItem="g24-vv-XTE" firstAttribute="trailing" secondItem="fnD-i1-tMt" secondAttribute="trailing" id="DXt-U0-oHR"/>
+                            <constraint firstItem="g24-vv-XTE" firstAttribute="top" secondItem="fOJ-Aj-NdM" secondAttribute="bottom" constant="24" id="FX6-Hd-W2G"/>
+                            <constraint firstItem="fOJ-Aj-NdM" firstAttribute="leading" secondItem="fnD-i1-tMt" secondAttribute="leading" id="HTB-wY-rrY"/>
                             <constraint firstItem="krk-ns-0wU" firstAttribute="centerX" secondItem="nX4-pe-go9" secondAttribute="centerX" id="LaK-My-FZb"/>
                             <constraint firstItem="krk-ns-0wU" firstAttribute="top" secondItem="nX4-pe-go9" secondAttribute="top" constant="37" id="MBN-sd-U2a"/>
+                            <constraint firstItem="fOJ-Aj-NdM" firstAttribute="top" secondItem="fnD-i1-tMt" secondAttribute="bottom" constant="24" id="TaB-rV-N9t"/>
                             <constraint firstItem="g24-vv-XTE" firstAttribute="leading" secondItem="fnD-i1-tMt" secondAttribute="leading" id="UfX-fy-xR3"/>
                             <constraint firstItem="fnD-i1-tMt" firstAttribute="trailing" secondItem="Iir-rG-ZyZ" secondAttribute="trailing" id="Ycm-IC-Nx2"/>
                             <constraint firstItem="krk-ns-0wU" firstAttribute="leading" secondItem="Z9H-Cz-RTe" secondAttribute="leadingMargin" constant="16" id="aC5-QZ-cWI"/>
@@ -144,6 +153,7 @@
                     <connections>
                         <outlet property="contentLabel" destination="g24-vv-XTE" id="IN2-Ts-Iag"/>
                         <outlet property="descriptionLabel" destination="fnD-i1-tMt" id="bBf-5w-Hxy"/>
+                        <outlet property="favoritesButton" destination="fOJ-Aj-NdM" id="dcl-mY-4f0"/>
                         <outlet property="imageView" destination="krk-ns-0wU" id="1jl-Fj-6er"/>
                         <outlet property="titleLabel" destination="Iir-rG-ZyZ" id="dYr-3n-cMD"/>
                     </connections>

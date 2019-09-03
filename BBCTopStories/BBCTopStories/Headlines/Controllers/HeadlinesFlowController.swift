@@ -10,7 +10,8 @@ import UIKit
 
 class HeadlinesFlowController: HeadlinesControllerDelegate {
     
-    private var headlinesController = HeadlinesController()
+    private var headlinesController = HeadlinesListController()
+    private var detailController: HeadlineDetailController?
     
     init() {
         headlinesController.delegate = self
@@ -21,20 +22,16 @@ class HeadlinesFlowController: HeadlinesControllerDelegate {
     }
     
     func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story) {
-        guard let navController = headlinesList.navigationController,
-            let detailVC = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlineDetail) as? HeadlineDetailViewController
-            else {
-                
-                return
-        }
-        detailVC.story = story
-        navController.pushViewController(detailVC, animated: true)
+        guard let navController = headlinesList.navigationController else { return }
+        
+        detailController = HeadlineDetailController(story: story)
+        navController.pushViewController(detailController!.viewController, animated: true)
     }
 }
 
 #if DEBUG
 extension HeadlinesFlowController {
-    var exposedController: HeadlinesController {
+    var exposedController: HeadlinesListController {
         return headlinesController
     }
 }

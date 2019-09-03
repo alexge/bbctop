@@ -1,5 +1,5 @@
 //
-//  HeadlinesController.swift
+//  HeadlinesListController.swift
 //  BBCTopStories
 //
 //  Created by Alexander Ge on 01/09/2019.
@@ -12,7 +12,7 @@ protocol HeadlinesControllerDelegate: class {
     func headlinesList(_ headlinesList: HeadlinesListViewController, didSelectHeadline story: Story)
 }
 
-final class HeadlinesController: NSObject {
+final class HeadlinesListController: NSObject {
     
     private let listViewController: HeadlinesListViewController
     
@@ -73,7 +73,7 @@ final class HeadlinesController: NSObject {
     }
 }
 
-extension HeadlinesController: HeadlinesListViewControllerDelegate {
+extension HeadlinesListController: HeadlinesListViewControllerDelegate {
     
     func headlinesListDidReachBottom(_ headlinesList: HeadlinesListViewController) {
         loadNextPage()
@@ -85,7 +85,7 @@ extension HeadlinesController: HeadlinesListViewControllerDelegate {
 }
 
 #if DEBUG
-extension HeadlinesController {
+extension HeadlinesListController {
     var exposedList: HeadlinesListViewController {
         return listViewController
     }
