@@ -16,19 +16,13 @@ final class RequestPerformer: RequestPerformable {
     
     private let basePath: String = "https://newsapi.org/v2/top-headlines"
     private let apiKey: String = "56ec127545f14bd6a0ce5c296b00cb2d"
-    var source: String {
-        switch AppSource.current {
-        case .bbc:
-            return "bbc-news"
-        case .nyt:
-            return "the-new-york-times"
-        }
-    }
+    private var source: String
     
     private let urlSession: URLSession
     
-    init(urlSession: URLSession = URLSession.shared) {
+    init(urlSession: URLSession = URLSession.shared, sourceString: String) {
         self.urlSession = urlSession
+        self.source = sourceString
     }
     
     func fetchTopStories(page: Int, successHandler: @escaping (([Story]) -> Void)) {

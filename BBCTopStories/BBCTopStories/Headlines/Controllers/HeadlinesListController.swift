@@ -34,7 +34,7 @@ final class HeadlinesListController: NSObject {
     
     weak var delegate: HeadlinesControllerDelegate?
     
-    init(requestPerformer: RequestPerformable = RequestPerformer()) {
+    init(requestPerformer: RequestPerformable = RequestPerformer(sourceString: AppSource.current.sourceString)) {
         guard let viewController: HeadlinesListViewController = Storyboards.headlines.viewController(scene: HeadlinesStoryboardScenes.headlinesList) else {
             listViewController = HeadlinesListViewController()
             self.requestPerformer = requestPerformer

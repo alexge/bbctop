@@ -38,7 +38,7 @@ class RequestPerformerTests: XCTestCase {
     func testFetchStories_WithValidJson_ShouldCallHandler() {
         // Arrange
         let mockSession = MockURLSession(objectToReturnAsData: validJSON)
-        let requestPerformer = RequestPerformer(urlSession: mockSession)
+        let requestPerformer = RequestPerformer(urlSession: mockSession, sourceString: AppSource.bbc.sourceString)
         let successExpectation = expectation(description: "success response")
         
         // Act
@@ -54,7 +54,7 @@ class RequestPerformerTests: XCTestCase {
     func testFetchStories_WithoutJSONData_ShouldNotCallHandler() {
         // Arrange
         let mockSession = MockURLSession(objectToReturnAsData: nil)
-        let requestPerformer = RequestPerformer(urlSession: mockSession)
+        let requestPerformer = RequestPerformer(urlSession: mockSession, sourceString: AppSource.bbc.sourceString)
         let failureExpectation = expectation(description: "failure response")
         failureExpectation.isInverted = true
         
@@ -71,7 +71,7 @@ class RequestPerformerTests: XCTestCase {
     func testFetchStories_WithInvalidJSONData_ShouldNotCallHandler() {
         // Arrange
         let mockSession = MockURLSession(objectToReturnAsData: nil)
-        let requestPerformer = RequestPerformer(urlSession: mockSession)
+        let requestPerformer = RequestPerformer(urlSession: mockSession, sourceString: AppSource.bbc.sourceString)
         let failureExpectation = expectation(description: "failure response")
         failureExpectation.isInverted = true
         

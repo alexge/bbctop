@@ -28,4 +28,22 @@ enum AppSource {
             return "NYT"
         }
     }
+    
+    var cacheDirectory: String {
+        switch AppSource.current {
+        case .bbc:
+            return "BBCStoriesFavorites/"
+        case .nyt:
+            return "NYCStoriesFavorites/"
+        }
+    }
+    
+    var sourceString: String {
+        switch AppSource.current {
+        case .bbc:
+            return "bbc-news"
+        case .nyt:
+            return "the-new-york-times"
+        }
+    }
 }
