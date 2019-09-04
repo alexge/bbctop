@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let headlinesFlow = HeadlinesFlowController()
+    let headlinesNav = UINavigationController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -20,11 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow()
         self.window = window
         
-        let navigationController = UINavigationController()
-
-        navigationController.setViewControllers([headlinesFlow.initialViewController()], animated: false)
+        headlinesNav.setViewControllers([headlinesFlow.initialViewController()], animated: false)
         
-        window.rootViewController = navigationController
+        // Biometric login
+        let biometricVC = BiometricLoginViewController()
+        biometricVC.successHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.window?.rootViewController = self?.headlinesNav
+            }
+        }
+        window.rootViewController = biometricVC
         window.makeKeyAndVisible()
         
         return true

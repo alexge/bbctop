@@ -67,6 +67,8 @@
 		E8F5D5AA231F19CD001EC42E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F5D518231BE869001EC42E /* Assets.xcassets */; };
 		E8F5D5D6231F1C07001EC42E /* AppSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5D5231F1C07001EC42E /* AppSource.swift */; };
 		E8F5D5D7231F1C07001EC42E /* AppSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5D5231F1C07001EC42E /* AppSource.swift */; };
+		E8F5D5DA231FF181001EC42E /* BiometricLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5D9231FF181001EC42E /* BiometricLoginViewController.swift */; };
+		E8F5D5DB231FF181001EC42E /* BiometricLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D5D9231FF181001EC42E /* BiometricLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,7 @@
 		E8F5D5AF231F19CD001EC42E /* NYTTopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTTopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F5D5D4231F1ABC001EC42E /* NYTTopStories.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = NYTTopStories.plist; path = /Users/alexander.ge/Desktop/bbctop/BBCTopStories/NYTTopStories.plist; sourceTree = "<absolute>"; };
 		E8F5D5D5231F1C07001EC42E /* AppSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSource.swift; sourceTree = "<group>"; };
+		E8F5D5D9231FF181001EC42E /* BiometricLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 				E8F5D511231BE867001EC42E /* AppDelegate.swift */,
 				E8F5D5D5231F1C07001EC42E /* AppSource.swift */,
 				E8F5D53D231BEEE3001EC42E /* Storyboards.swift */,
+				E8F5D5D8231FF15C001EC42E /* BiometricLogin */,
 				E8F5D537231BEAEC001EC42E /* Headlines */,
 				E8F5D550231BFCBC001EC42E /* Networking */,
 				E8F5D53F231BEF9E001EC42E /* Extensions */,
@@ -359,6 +363,14 @@
 				E8F5D588231EF9CD001EC42E /* MockFavoritesCache.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		E8F5D5D8231FF15C001EC42E /* BiometricLogin */ = {
+			isa = PBXGroup;
+			children = (
+				E8F5D5D9231FF181001EC42E /* BiometricLoginViewController.swift */,
+			);
+			path = BiometricLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +599,7 @@
 				E8F5D552231BFCD1001EC42E /* RequestPerformer.swift in Sources */,
 				E8F5D54F231BFA0D001EC42E /* HeadlinesCell.swift in Sources */,
 				E8F5D58B231F00E1001EC42E /* FavoriteHeadlinesController.swift in Sources */,
+				E8F5D5DA231FF181001EC42E /* BiometricLoginViewController.swift in Sources */,
 				E8F5D578231E9D98001EC42E /* HeadlineDetailController.swift in Sources */,
 				E8F5D574231D9228001EC42E /* FavoritesManager.swift in Sources */,
 				E8F5D53B231BED15001EC42E /* HeadlinesListViewController.swift in Sources */,
@@ -635,6 +648,7 @@
 				E8F5D59C231F19CD001EC42E /* RequestPerformer.swift in Sources */,
 				E8F5D59D231F19CD001EC42E /* HeadlinesCell.swift in Sources */,
 				E8F5D59E231F19CD001EC42E /* FavoriteHeadlinesController.swift in Sources */,
+				E8F5D5DB231FF181001EC42E /* BiometricLoginViewController.swift in Sources */,
 				E8F5D59F231F19CD001EC42E /* HeadlineDetailController.swift in Sources */,
 				E8F5D5A0231F19CD001EC42E /* FavoritesManager.swift in Sources */,
 				E8F5D5A1231F19CD001EC42E /* HeadlinesListViewController.swift in Sources */,
@@ -791,6 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = BBCTopStories/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -811,6 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = BBCTopStories/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -878,6 +894,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = NYTTopStories.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,6 +915,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LU4SWMQRX;
 				INFOPLIST_FILE = NYTTopStories.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
